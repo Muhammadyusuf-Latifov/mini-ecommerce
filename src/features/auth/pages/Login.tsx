@@ -13,19 +13,20 @@ type FieldType = {
 
 const Login = () => {
   const { signIn } = useAuth();
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
     signIn.mutate(values, {
       onSuccess: (res) => {
-        dispatch(setToken(res.data))
-        navigate("/")
-      }
-    })
+        dispatch(setToken(res.data));
+        navigate("/");
+      },
+    });
   };
+//@ts-ignore
+  const message = signIn.error?.response?.data?.message;
 
-  const message = signIn.error?.response?.data?.message 
 
   const errorMessage =
     typeof message === "string"
