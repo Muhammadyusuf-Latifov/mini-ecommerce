@@ -1,11 +1,10 @@
 import { memo } from "react";
-// import { useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { Navigate, Outlet } from "react-router-dom";
-// import type { RootState } from "../../../app/store";
+import type { RootState } from "../../../app/store";
 
 const Auth = () => {
-  const token = true;
-  // useSelector((state: RootState) => state.auth.token);
+  const token = useSelector((state: RootState) => state.auth.token);
 
   return token ? <Outlet /> : <Navigate replace to={"/login"} />;
 };
