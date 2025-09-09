@@ -1,1 +1,6 @@
 @import "tailwindcss";
+td{
+    padding: 20px 6px;
+    
+
+}
