@@ -1,6 +1,8 @@
 @import "tailwindcss";
-td{
-    padding: 20px 6px;
-    
-
+td {
+  padding: 20px 6px;
+}
+.navlink.active{
+background: #49494971;
+padding-left: 16px;
 }
