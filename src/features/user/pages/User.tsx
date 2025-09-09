@@ -17,7 +17,7 @@ const User = () => {
         </thead>
         <tbody>
           <tr className="bg-[#ddd]">
-            <td className="pl-[10px] ">zor</td>
+            <td className="pl-[10px] ">1</td>
             <td>info</td>
             <td>info</td>
             <td>info</td>
